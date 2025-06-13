@@ -1,0 +1,271 @@
+<!-- Technical Documentation Page FCCP project -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Python Documentation</header>
+      <div class="anchor-div">
+        <a class="nav-link" href="#Introduction">Introduction</a><br>
+      </div>
+      <div class="anchor-div">
+        <a class="nav-link" href="#Installation">Installation</a><br>
+      </div>
+      <div class="anchor-div">
+        <a class="nav-link" href="#Syntax_and_Semantics">Syntax and Semantics</a><br>
+      </div>
+      <div class="anchor-div">
+        <a class="nav-link" href="#Variables_and_Data_Types">Variables and Data Types</a><br>
+    </div>
+    <div class="anchor-div">
+      <a class="nav-link" href="#Control_Flow">Control Flow</a><br>
+    </div>
+    <div class="anchor-div">
+      <a class="nav-link" href="#Functions">Functions</a><br>
+    </div>
+    <div class="anchor-div">
+      <a class="nav-link" href="#Modules_and_Packages">Modules and Packages</a><br>
+    </div>
+    <div class="anchor-div">
+      <a class="nav-link" href="#Classes_and_Object-Oriented_Programming">Classes and Object-Oriented Programming</a><br>
+    </div>
+    <div class="anchor-div">
+      <a class="nav-link" href="#Exceptions_and_Error_Handling">Exceptions and Error Handling</a><br>
+    </div>
+    <div class="anchor-div">
+      <a class="nav-link" href="#File_Handling">File Handling</a><br>
+    </div>
+    <div class="anchor-div">
+      <a class="nav-link" href="#Standard_Library_Highlights">Standard Library Highlights</a><br>
+    </div>
+    <div class="anchor-div">
+      <a class="nav-link" href="#List_Comprehensions">List Comprehensions</a><br>
+    </div>
+    <div class="anchor-div">
+      <a class="nav-link" href="#Decorators">Decorators</a><br>
+    </div>
+    <div class="anchor-div">
+      <a class="nav-link" href="#Generators_and_Iterators">Generators and Iterators</a><br>
+    </div>
+    <div class="anchor-div">
+      <a class="nav-link" href="#Useful_Built-in_Functions">Useful Built-in Functions</a><br>
+    </div>
+
+    </nav>
+    
+    <main id="main-doc">
+
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>Python is a high-level, interpreted, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python emphasizes code readability with its notable use of significant whitespace. It supports multiple programming paradigms, including procedural, object-oriented, and functional programming.</p>
+      </section>
+
+      <section class="main-section" id="Installation">
+        <header>Installation</header>
+        <p>Python can be downloaded and installed from the official website python.org. It is available on multiple platforms such as Windows, macOS, and various Linux distributions. Most Linux distros come with Python pre-installed.
+
+You can verify the installation by running:</p>
+        <pre><code>python --version
+# or
+python3 --version
+</code></pre>
+      </section>
+      
+      <section class="main-section" id="Syntax_and_Semantics">
+        <header>Syntax and Semantics</header>
+        <p>Syntax and Semantics
+Python’s syntax is clean and easy to learn. Here are some key points:</p>
+<ul>
+<li>Indentation defines blocks of code.</li>
+
+<li>Statements do not require semicolons (;).</li>
+
+<li>Variables are dynamically typed and do not require explicit declaration.</li>
+</ul>
+
+<p>Example:</p>
+      <pre><code>if True:
+    print("Hello, World!")
+</code></pre>
+
+      </section>
+      <section class="main-section" id="Variables_and_Data_Types">
+        <header>Variables and Data Types</header>
+        <p>Python supports several data types:</p>
+<ul>
+<li>Numbers: int, float, complex</li>
+
+<li>Sequences: list, tuple, range</li>
+
+<li>Text: str</li>
+
+<li>Mappings: dict</li>
+
+<li>Sets: set, frozenset</li>
+
+<li>Boolean: bool</li>
+
+<li>Binary: bytes, bytearray, memoryview<br></li>
+</ul>
+<p>Example:</p>
+        <pre><code>x = 10          # int
+name = "Alice"  # string
+pi = 3.14159    # float
+is_valid = True # boolean
+</code></pre>
+      </section>
+
+      <section class="main-section" id="Control_Flow">
+        <header>Control Flow</header>
+        <p>Conditional Statements</p>
+        <pre><code>if condition:
+    # code block
+elif another_condition:
+    # code block
+else:
+    # code block
+</code></pre>
+      </section>
+
+      <section class="main-section" id="Functions">
+        <header>Functions</header>
+        <p>Functions are defined using the def keyword:</p>
+        <pre><code>def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Bob"))
+</code></pre>
+        <p>Functions can have default parameters, variable-length arguments, and keyword arguments.</p>
+      </section>
+      <section class="main-section" id="Modules_and_Packages">
+        <header>Modules and Packages</header>
+        <p>Python modules are files containing Python code. You can import modules using the import statement.
+
+Example:</p>
+        <pre><code>import math
+print(math.sqrt(16))
+</code></pre>
+      </section>
+      
+      <section class="main-section" id="Classes_and_Object-Oriented_Programming">
+        <header>Classes and Object-Oriented Programming</header>
+        
+        <p>Python supports classes and OOP principles:</p>
+        <pre><code>class Dog:
+    def __init__(self, name):
+        self.name = name
+
+    def bark(self):
+        print(f"{self.name} says woof!")
+
+dog = Dog("Buddy")
+dog.bark()
+</code></pre>
+<p>Supports inheritance, polymorphism, encapsulation, etc.</p>
+      </section>
+      <section class="main-section" id="Exceptions_and_Error_Handling">
+        <header>Exceptions and Error Handling</header>
+        <p>Use try, except, else, and finally blocks:</p>
+        <pre><code>try:
+    result = 10 / 0
+except ZeroDivisionError:
+    print("Cannot divide by zero!")
+else:
+    print("Division successful!")
+finally:
+    print("This runs no matter what.")
+</code></pre>
+      </section>
+
+      <section class="main-section" id="File_Handling">
+        <header>File Handling</header>
+        <p>Open, read, write, and close files</p>
+        <pre><code>with open('file.txt', 'r') as file:
+    content = file.read()
+    print(content)
+</code></pre>
+      </section>
+
+      <section class="main-section" id="Standard_Library_Highlights">
+        <header>Standard Library Highlights</header>
+        <p>Python has a rich standard library including modules such as:</p>
+<ul>
+<li>os — Operating system interfaces</li>
+
+<li>sys — System-specific parameters and functions</li>
+
+<li>datetime — Date and time manipulation</li>
+
+<li>json — JSON encoding and decoding</li>
+
+<li>re — Regular expressions</li>
+</ul>
+      </section>
+      <section class="main-section" id="List_Comprehensions">
+        <header>List Comprehensions</header>
+        <p>A concise way to create lists:</p>
+        <pre><code>squares = [x**2 for x in range(10)]
+</code></pre>
+      </section>
+
+      <section class="main-section" id="Decorators">
+        <header>Decorators</header>
+        <p>Functions that modify other functions:</p>
+        <pre><code>def decorator(func):
+    def wrapper():
+        print("Before function call")
+        func()
+        print("After function call")
+    return wrapper
+
+@decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
+</code></pre>
+      </section>
+
+      <section class="main-section" id="Generators_and_Iterators">
+        <header>Generators and Iterators</header>
+        <p>Generators produce items one at a time using yield:</p>
+        <pre><code>def countdown(n):
+    while n > 0:
+        yield n
+        n -= 1
+
+for number in countdown(5):
+    print(number)
+</code></pre>
+      </section>
+
+      <section class="main-section" id="Useful_Built-in_Functions">
+        <header>Useful Built-in Functions</header>
+        <ul>
+          <li>print()</li>
+
+          <li>len()</li>
+
+          <li>range()</li>
+
+          <li>type()</li>
+
+          <li>isinstance()</li>
+
+          <li>enumerate()</li>
+
+          <li>zip()</li>
+
+          <li>map()</li>
+
+          <li>filter()</li>
+        </ul>
+      </section>
+
+    </main>
+  </body>
+</html>
